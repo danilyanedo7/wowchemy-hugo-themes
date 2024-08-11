@@ -40,6 +40,11 @@
     <script src="https://www.googleoptimize.com/optimize.js?id={{ site.Params.marketing.analytics.google_optimize }}"></script>
   {{- end -}}
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic {{ site.Data.academic.version }}">
+  {{ partial "google/ads" . }}
+  {{ $scr := .Scratch }}
   {{/* Attempt to load superuser. */}}
   {{ $superuser_name := "" }}
   {{ $superuser_username := "" }}
